@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_version_icon_height">35dp</dimen>
+    <dimen name="splash_version_icon_width">30dp</dimen>
+    <dimen name="marginHalf">4dp</dimen>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="marginDouble">16dp</dimen>
+    <dimen name="marginDoubleDouble">32dp</dimen>
+    <dimen name="marginDoubleDoubleDouble">64dp</dimen>
+    <dimen name="marginDoubleDoubleDoubleDouble">128dp</dimen>
+    <dimen name="textSizeSecondary">13sp</dimen>
+</resources>

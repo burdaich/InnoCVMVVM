@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#626bae</color>
+    <color name="colorPrimaryProgressBar">#4D626BAE</color>
+    <color name="colorPrimaryDark">#001789</color>
+    <color name="colorAccent">#6633B5E5</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="red">#FF6F61</color>
+    <color name="green">#9CCC65</color>
+
+    <color name="textColorPrimary">#313131</color>
+    <color name="textColorSecondary">#d3d3d3</color>
+    <color name="textColorToolbarTitle">#2e2d2e</color>
+
+    <color name="disabled">#cccccc</color>
+    <color name="greyBg">#FAFAFA</color>
+    <color name="darkGrey">#9F9F9F</color>
+
+
+    <color name="colorIconPrincipalBackGround">#deecf1</color>
+    <color name="colorIconSecondaryBackGround">#c6e2e7</color>
+
+    <color name="colorIconPrincipal">#707789</color>
+    <color name="colorIconSecondary">#9196aa</color>
+    <color name="colorIconThird">#414952</color>
+
+    <color name="colorIconPrincipalBackGroundSelected">#e30000</color>
+    <color name="colorIconSecondaryBackGroundSelected">#d20000</color>
+
+
+
+
+
+    <!--    HOLO COLORS LIGHTER-->
+    <color name="holo_blue_light_pressed">#33CAE5</color>
+
+
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTextAppearance" />
+
+    <style name="AppTextAppearance.Headline">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.Headline2">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.Title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.AccentBody">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTextAppearance.WhiteButton">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTextAppearance.BorderlessButton">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.Body">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.BodySmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.Body2">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.BodyWhite">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTextAppearance.Error">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="AppTextAppearance.EditTextTopTextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.Label">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingStart">@dimen/marginDouble</item>
+        <item name="android:paddingEnd">@dimen/marginDouble</item>
+        <item name="android:paddingTop">@dimen/margin</item>
+        <item name="android:paddingBottom">@dimen/margin</item>
+    </style>
+
+    <style name="AppTextAppearance.EditText">
+        <item name="android:background">@drawable/edit_text_bg</item>
+        <item name="android:drawableTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.EditTextRounded">
+        <item name="android:background">@drawable/edit_text_bg_rounded</item>
+        <item name="android:drawableTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.ButtonSolid">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/button_primary</item>
+    </style>
+
+    <style name="AppTextAppearance.ButtonSolidWhite">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@drawable/text_color_primary_enabled_selector</item>
+        <item name="android:background">@drawable/button_white</item>
+    </style>
+
+    <style name="AppTextAppearance.ButtonBorder">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@drawable/text_color_enabled_selector</item>
+        <item name="android:background">@drawable/button_border</item>
+    </style>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">INNOCV</string>
+    <string name="userFilterHint">introduzca un nombre</string>
+    <string name="noUserDescription">No hay usuarios</string>
+    <string name="noUserDescriptionAdvanced">por el momento no hay usuarios que mostrar</string>
+    <string name="refreshButton">Refrescar</string>
+</resources>
