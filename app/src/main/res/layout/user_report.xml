@@ -32,17 +32,17 @@
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:textAppearance="@style/AppTextAppearance.Title"
-                app:layout_constraintBottom_toBottomOf="@+id/tvStudyStatus"
-                app:layout_constraintEnd_toStartOf="@+id/tvStudyStatus"
+                app:layout_constraintBottom_toBottomOf="@+id/deleteUserIV"
+                app:layout_constraintEnd_toStartOf="@+id/deleteUserIV"
                 app:layout_constraintStart_toStartOf="parent"
 
-                app:layout_constraintTop_toTopOf="@+id/tvStudyStatus" />
+                app:layout_constraintTop_toTopOf="@+id/deleteUserIV" />
             <!--                android:text="@{report.proceedingsId}"-->
 
             <!--            android:text="@{String.format(@string/companyDesc, report.accessControl)}"-->
 
             <ImageView
-                android:id="@+id/tvStudyStatus"
+                android:id="@+id/deleteUserIV"
                 style="@style/AppTextAppearance.Label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

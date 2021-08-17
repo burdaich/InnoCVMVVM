@@ -9,14 +9,21 @@
         android:id="@+id/mainFragment"
         android:name="com.edorta.rodriguez.innocv.ui.fragment.MainFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment" >
+        tools:layout="@layout/main_fragment">
         <action
             android:id="@+id/action_mainFragment_to_manageUserFragment"
             app:destination="@id/manageUserFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/manageUserFragment"
         android:name="com.edorta.rodriguez.innocv.ui.fragment.ManageUserFragment"
         android:label="manage_user_fragment"
-        tools:layout="@layout/manage_user_fragment" />
+        tools:layout="@layout/manage_user_fragment">
+        <argument
+            android:name="userModel"
+            app:argType="com.edorta.rodriguez.innocv.model.UserModel"
+            app:nullable="true" />
+    </fragment>
+
 </navigation>

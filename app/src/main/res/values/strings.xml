@@ -4,4 +4,14 @@
     <string name="noUserDescription">No hay usuarios</string>
     <string name="noUserDescriptionAdvanced">por el momento no hay usuarios que mostrar</string>
     <string name="refreshButton">Refrescar</string>
+    <string name="yes">si</string>
+    <string name="no">no</string>
+    <string name="deleteUser">Borrar usuario</string>
+    <string name="deleteUserDescription">deleteUserDescription</string>
+    <string name="insert_name">Introduce nombre</string>
+    <string name="date_selector">Seleccione una fecha</string>
+    <string name="save_user">Guardar usuario</string>
+    <string name="update_user">Actualizar usuario</string>
+    <string name ="exit_sure">Salir de la aplicación</string>
+    <string name ="exit_sure_message">¿Estas seguro de salir de la aplicación?</string>
 </resources>

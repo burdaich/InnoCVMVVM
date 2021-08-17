@@ -5,17 +5,23 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.edorta.rodriguez.innocv.R
 import com.edorta.rodriguez.innocv.databinding.MainFragmentBinding
 import com.edorta.rodriguez.innocv.model.UserModel
 import com.edorta.rodriguez.innocv.ui.adapter.UserAdapterListener
+import com.edorta.rodriguez.innocv.utils.Utils
+import com.edorta.rodriguez.innocv.utils.Utils.Companion.dialogYesNo
 import com.edorta.rodriguez.innocv.viewmodel.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainFragment : Fragment(R.layout.main_fragment), UserAdapterListener {
     private val TAG = MainFragment::class.java.name
     private val mainViewModel: MainViewModel by viewModels()
@@ -54,6 +60,13 @@ class MainFragment : Fragment(R.layout.main_fragment), UserAdapterListener {
             filterList(it.toString())
         }
 
+        binding.addNewUser.setOnClickListener {
+            findNavController().navigate(
+                MainFragmentDirections.actionMainFragmentToManageUserFragment(null)
+            )
+        }
+
+        binding.toolbar.setOnMenuItemClickListener { toolbarListener(it) }
     }
 
     private fun subscribeUi() {
@@ -63,6 +76,16 @@ class MainFragment : Fragment(R.layout.main_fragment), UserAdapterListener {
             apiUserList = it
             userAdapter.updateData(apiUserList)
 
+        })
+
+        mainViewModel.deleteUserResponse.observe(viewLifecycleOwner, { deletedUser ->
+            deletedUser?.let {
+                apiUserList?.apply {
+                    apiUserList = this.dropWhile { userModel -> userModel.id == it.id }
+
+                    userAdapter.updateData(apiUserList)
+                }
+            }
         })
     }
 
@@ -77,7 +100,20 @@ class MainFragment : Fragment(R.layout.main_fragment), UserAdapterListener {
     }
 
     override fun onUserAdapterClick(userModel: UserModel) {
-        Log.d(TAG, userModel.toString())
+        findNavController().navigate(
+            MainFragmentDirections.actionMainFragmentToManageUserFragment(
+                userModel
+            )
+        )
+    }
+
+    override fun onUserDeleteClick(userModel: UserModel) {
+        dialogYesNo(
+            getString(R.string.deleteUser),
+            getString(R.string.deleteUserDescription),
+            userModel,
+            yesFunc = ::deleteUser,
+        )
     }
 
     private fun filterList(findString: String) {
@@ -93,4 +129,35 @@ class MainFragment : Fragment(R.layout.main_fragment), UserAdapterListener {
 
         userAdapter.updateData(filteredUsers)
     }
+
+
+    private fun deleteUser(userModel: Any) {
+        mainViewModel.deleteUser(userModel as UserModel)
+    }
+
+
+    private fun toolbarListener(it: MenuItem): Boolean {
+        when (it.itemId) {
+            R.id.mCloseApp -> {
+                askForLogout()
+            }
+        }
+        return true
+    }
+
+    fun askForLogout() {
+        dialogYesNo(
+            getString(R.string.exit_sure),
+            getString(R.string.exit_sure_message),
+            yesFuncParameter = "Close App",
+            yesFunc = ::closeApp
+        )
+    }
+
+    private fun closeApp(closeApp: Any) {
+        activity?.finish()
+    }
 }
+
+
+
